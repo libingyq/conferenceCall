@@ -1,0 +1,40 @@
+
+<scroll-view scroll-y="true" class='container'>
+    <view>
+    </view>
+    <view class='list-scroll-item mt-20 border-line' wx:for="{{meetings}}" wx:key="{{index}}" style='{{item.left}}'>
+        <view class='scroll-item-inner' >
+            <view class='item-inner-content' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+                <view class='meeting-item-title flex'>
+                    <view class='item-center'>
+                        <image src='../../image/meeting_people_icon.png' mode='widthFix' class='title-icon'/>
+                        <text>{{item.topic}}</text>
+                    </view>
+                    <view class=''>
+                        <text class='status-text'>{{item.meetingstatus}}</text>
+                    </view>
+                </view>
+                <view class='meeting-item-title flex space-between item-center border-line'>
+                    <view>
+                        <image src='../../image/meeting_time_icon.png' mode='widthFix' class='title-icon' />
+                        <text>{{item.starttime}}</text>
+                    </view>
+                    <view>
+                        <button class='button-default button-mini' data-id="{{item.id}}">开始会议</button>
+                    </view>
+                </view>
+                <view class='meeting-item-bottom item-center flex'>
+                    <view class='icon-point'></view>
+                    <text>会议号：{{item.guestcode}}</text>
+                    <text>密码：{{item.hostcode}}</text>
+                </view>
+            </view>
+            <view class='menu-group'>
+                <view class='menu-item menu-item-change' data-index="{{index}}" data-id="{{item.id}}" catchtap="delItem">变更</view>
+                <view class='menu-item menu-item-notice' data-index="{{index}}" data-id="{{item.id}}" catchtap="delItem">通知</view>
+                <view class='menu-item menu-item-cancel' data-index="{{index}}" data-id="{{item.id}}" catchtap="delItem">取消</view>
+            </view>
+        </view>
+        
+    </view>
+</scroll-view>

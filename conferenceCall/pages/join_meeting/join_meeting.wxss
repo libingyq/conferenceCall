@@ -1,0 +1,28 @@
+/* pages/join_meeting/join_meeting.wxss */
+.error-message {
+  padding: 0 28rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  color: #b03a43;
+  background-color: #efe5e2;
+}
+.joinIn {
+  margin-left: 230px;
+  margin-top: 25rpx；;
+}
+
+/*解决加入会议中 列表水平居中的问题*/
+
+.historyMeeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+/*清除加入会议的侧边滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

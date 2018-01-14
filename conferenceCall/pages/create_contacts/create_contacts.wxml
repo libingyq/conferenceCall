@@ -1,0 +1,46 @@
+<!--pages/create_contacts/create_contacts.wxml-->
+<form>
+    <view class='error-message'>请输入用户名</view>
+    <view class='model-list-group'>
+        <view class='list-group-item'>
+            <view>用户名：</view>
+            <view class='flex'>
+                <input type='text' bindinput='bindKeyInput' data-type='username' class='form-input' placeholder='请输入用户名'></input>
+            </view>
+        </view>
+        <view class='list-group-item'>
+            <view>手机号：</view>
+            <view class='flex'>
+                <input type='number' bindinput='bindKeyInput' data-type='phonenumber'  class='form-input' placeholder='请输入手机号'></input>
+            </view>
+        </view>
+    </view>
+    <view class='model-group-title'>添加入用户组</view>
+    <view class='mail-group-container'>
+        <view class='mail-group-item' wx:for='{{list}}' wx:key='{{index}}'>
+            <checkbox color='#5996ad'></checkbox>
+            <view>{{item.groupname}}</view>
+        </view>
+        <!-- <view class='mail-group-item'>
+            <checkbox color='#5996ad'></checkbox>
+            <view>总裁办2</view>
+        </view>
+        <view class='mail-group-item'>
+            <checkbox color='#5996ad'></checkbox>
+            <view>总裁办3</view>
+        </view>
+        <view class='mail-group-item'>
+            <checkbox color='#5996ad'></checkbox>
+            <view>总裁办4</view>
+        </view>
+        <view class='mail-group-item'>
+            <checkbox color='#5996ad'></checkbox>
+            <view>总裁办5</view>
+        </view> -->
+        
+    </view>
+    <view class='bottom-button-container'>
+        <button class='button-primary' bindtap='doCreate'>创建</button>
+        <button class='button-default mt-30' bindtap='navigateBack'>返回</button>
+    </view>
+</form>

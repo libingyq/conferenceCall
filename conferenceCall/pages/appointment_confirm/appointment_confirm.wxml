@@ -1,0 +1,48 @@
+<view class='model-list-group mt-20'>
+  <view class='list-group-item'>
+    <view>请输入会议主题：</view>
+    <view>{{confName}}</view>
+  </view>
+  <view class='list-group-item'>
+    <view>开始时间：</view>
+    <view>{{startTime}}</view>
+  </view>
+</view>
+<view>
+  <view class='form-group mt-20'>
+    <view class='form-group-item border-line flex space-between'>
+      <view class='inline-flex'>参会人({{selectedUsers.length}})</view>
+    </view>
+  </view>
+  <view class='users-list-container'>
+    <!-- <view class='user-list-item' wx:for="{{list}}" wx:key="{{index}}"> -->
+    <view class='user-list-item' wx:for='{{selectedUsers}}' wx:key='{{index}}' wx:for-item='iteminfo'>
+      <!-- <view class='list-item-inner' style='{{item.left}}'> -->
+      <view class='list-item-inner' style='{{iteminfo.left}}'>
+        <!-- <view class='user-content border-line' bindtouchstart='touchS' 
+                    bindtouchmove='touchM' bindtouchend='touchE' data-index="{{index}}"> -->
+        <view class='user-content border-line' bindtouchstart='touchS' bindtouchmove='touchM' bindtouchend='touchE' data-index='{{index}}'>
+          <view>{{iteminfo.username}}</view>
+          <view>{{iteminfo.telephone}}</view>
+        </view>
+        <view class='user-menu flex'>
+          <view class='set-user' data-index="{{index}}" catchtap='delItem'>设为参会人</view>
+          <view class='remove-user' data-index="{{index}}" catchtap='delItem'>删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom-button-container'>
+  <view class='flex space-between'>
+    <view class='flex'>
+      <button class='button-primary'>发送短信通知</button>
+    </view>
+    <view class='flex'>
+      <button class='button-primary'>发送邮件通知</button>
+    </view>
+  </view>
+  <view class='mt-20'>
+    <button class='button-default' bind>完成</button>
+  </view>
+</view>

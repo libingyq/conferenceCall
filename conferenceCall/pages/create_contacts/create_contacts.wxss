@@ -1,0 +1,10 @@
+.mail-group-container {
+    padding: 0 28rpx;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.mail-group-item {
+    display: flex;
+    width: 33.33%;
+}

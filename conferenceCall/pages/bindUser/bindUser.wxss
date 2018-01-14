@@ -1,0 +1,53 @@
+.block-color {
+    height: 315rpx;
+    width: 100%;
+    background-color: #4b99b0;
+}
+.block-title {
+    color: white;
+    font-size: 32rpx;
+    padding-top: 60rpx;
+    display: block;
+    text-align: center;
+}
+.position-block {
+    position: absolute;
+    top: 200rpx;
+    left: 5%;
+    right: 5%;
+    background-color: white;
+    border-radius: 10rpx;
+}
+.logo-image {
+    height: 86rpx;
+    width: 86rpx;
+    display: flex;
+}
+.logo-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: -36rpx;
+}
+.field-container {
+    padding: 0 50rpx;
+    padding-bottom: 30rpx;
+}
+.button-group {
+    padding: 0 5%;
+    padding-top: 300rpx;
+}
+.input-icon {
+    height: 48rpx;
+    width: 48rpx;
+    overflow: hidden;
+}
+.input-field {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+}
+.input-space {
+    padding: 30rpx 0;
+}

@@ -1,0 +1,37 @@
+/* pages/more/more.wxss */
+/* pages/leftSwiperDel/index.wxss */
+.userinfo-container {
+    padding: 0 28rpx;
+    background-color: white;
+}
+.userinfo-inner {
+    padding: 56rpx 0;
+}
+.user-image {
+    height: 94rpx;
+    width: 94rpx;
+    border-radius: 94rpx;
+    border: 2rpx solid #338198;
+}
+.userinfo-content {
+    margin-left: 40rpx;
+    align-content: space-around;
+}
+.items-center {
+    align-items: center;
+}
+.model-group {
+    background-color: white;
+}
+.group-inner {
+    padding: 0 28rpx;
+}
+.group-item {
+    height: 96rpx;
+    line-height: 96rpx;
+}
+.alert-message {
+    padding: 28rpx;
+    color: #878787;
+    font-size: 20rpx;
+}

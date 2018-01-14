@@ -1,0 +1,108 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='express-model'>
+    <view class='express-model-item'>
+      <view class='align-center'>
+        <image src='../../image/meeting_immediately_highlighted.png' style='width:146rpx;height:146rpx;' mode='widthFix' bindtap='navigateToStartMeeting'></image>
+      </view>
+      <view class='align-center'>
+        <text>立即开会</text>
+      </view>
+    </view>
+    <view class='express-model-item'>
+      <view class='align-center'>
+        <image src='../../image/meeting_join_normal.png' style='width:146rpx;height:146rpx;' mode='widthFix' bindtap='navigateToJoinMeeting'></image>
+      </view>
+      <view class='align-center'>
+        <text>加入会议</text>
+      </view>
+    </view>
+  </view>
+  <view class='tab-group mt-20 border-line'>
+    <view class='tab-title {{ currentTab == 0 ? "tab-title-active" : "" }}' data-current='0' bindtap='tabSwitch'>
+      <text>我的用户组</text>
+    </view>
+    <view class='tab-title {{ currentTab == 1 ? "tab-title-active" : "" }}' data-current='1' bindtap='tabSwitch'>
+      <text>未分组用户</text>
+    </view>
+  </view>
+  <scroll-view style='{{ currentTab == 0 ? "display:block" : "display:none" }}'>
+    <!--我的用户组-->
+    <view class='scroll-item' wx:for='{{list}}' wx:key='{{index}}'>
+      <view class='scroll-item-inner'>
+        <view class=''>
+          <text>{{item.groupname}}({{item.users.length}})</text>
+        </view>
+        <view class='item-edit'>
+          <navigator url='../meeting_detail/meeting_detail?this.data.list[index].users' class='button-default button-mini mr-10' data-index='{{index}}' bindtap='clickDetail'>详情</navigator>
+          <navigator url='../start_meeting/start_meeting' class='button-primary button-mini'>开会</navigator>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view style='{{ currentTab == 1 ? "display:block" : "display:none" }}'>
+    <!--未分组用户-->
+    <view class='no-group-model colume' style='margin-bottom:15rpx'>
+      <view class='scroll-item-inner' style='height:120rpx'>
+        <view class='flex colume'>
+          <view class="flex-row" style="display:flex;width:400rpx;">
+            <image src='../../image/meeting_time_icon.png' style='width:40rpx;height:40rpx' mode='widthFix'></image>
+            <text style='color:gray'>10月22日 13:00</text>
+          </view>
+          <!-- <view>dsfsfsdfsdf</view> -->
+          <view class="flex-row" style="display:flex;width:400rpx">
+            <image src='../../image/meeting_people_icon.png' style='width:40rpx;height:40rpx' mode='widthFix'></image>
+            <text style='font-size:35rpx'>哈哈的即时会议<text style='color:gray;'>(11)</text></text>
+          </view>
+        </view>
+        <view class='item-edit startMeeting'>
+          <navigator class='button-default button-mini mr-10 button-detail'>详请</navigator>
+          <navigator class='button-primary button-mini button-detail'>开会</navigator>
+        </view>
+      </view>
+      <scroll-view scroll-x='true' class='horizontal-scroll-container'>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+      </scroll-view>
+    </view>
+    <view class='no-group-model colume'>
+      <view class='scroll-item-inner' style='height:120rpx'>
+        <view class='flex colume'>
+          <view class="flex-row" style="display:flex;width:400rpx;">
+            <image src='../../image/meeting_time_icon.png' style='width:40rpx;height:40rpx' mode='widthFix'></image>
+            <text style='color:gray'>10月22日 13:00</text>
+          </view>
+          <!-- <view>dsfsfsdfsdf</view> -->
+          <view class="flex-row" style="display:flex;width:400rpx">
+            <image src='../../image/meeting_people_icon.png' style='width:40rpx;height:40rpx' mode='widthFix'></image>
+            <text style='font-size:35rpx'>哈哈的即时会议<text style='color:gray;'>(11)</text></text>
+          </view>
+        </view>
+        <view class='item-edit startMeeting'>
+          <navigator class='button-default button-mini mr-10 button-detail'>详请</navigator>
+          <navigator class='button-primary button-mini button-detail'>开会</navigator>
+        </view>
+      </view>
+      <scroll-view scroll-x='true' class='horizontal-scroll-container'>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+        <view class='horizontal-scroll-item' style='color:gray'>嘻嘻</view>
+      </scroll-view>
+    </view>
+  </scroll-view>
+</view>

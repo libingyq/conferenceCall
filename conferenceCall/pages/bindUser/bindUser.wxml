@@ -1,0 +1,38 @@
+<view>
+    <view class='block-color'>
+        <text class='block-title'>欢迎使用瞩目电话会议</text>
+    </view>
+    <view class='position-block'>
+        <view class='logo-container'>
+            <image src='../../image/login_logo.png' mode='widthFix' class='logo-image'></image>
+        </view>
+        <view class='field-container'>
+            <view class='flex input-space'>
+                <view class='inline-flex'>
+                    <image src='../../image/login_phone.png' class='input-icon' mode='widthFix'></image>
+                </view>
+                <view class='flex'>
+                    <input type='text' bindinput='bindKeyInput' data-type='email'
+                     class='flex input-field' value='{{email}}' placeholder='请输入邮箱'></input>
+                </view>
+            </view>
+            <view class='flex input-space'>
+                <view class='inline-flex'>
+                    <image src='../../image/login_password.png' class='input-icon' mode='widthFix'></image>
+                </view>
+                <view class='flex'>
+                    <input type='password' bindinput='bindKeyInput' data-type='password' 
+                    class='flex input-field' value='{{password}}' placeholder='请输入密码'></input>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='button-group'>
+        <view>
+            <button class='button-primary' bindtap='doBind'>登录</button>
+        </view>
+        <view class='mt-30'>
+            <button class='button-default'>加入会议</button>
+        </view>
+    </view>
+</view>

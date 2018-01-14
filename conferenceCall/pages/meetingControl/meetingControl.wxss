@@ -1,0 +1,52 @@
+.tab-container {
+    height: 96rpx;
+    background-color: white;
+    display: flex;
+}
+.tab-item {
+    justify-content: center;
+}
+.tab-item-inner {
+    width: 214rpx;
+    border-bottom: 8rpx solid #fff;
+    text-align: center;
+    line-height: 96rpx;
+}
+.tab-active {
+    border-bottom: 8rpx solid #5996ad;
+}
+/* 底部导航 */
+.bottom-nav-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    height: 104rpx;
+    border-top: 1rpx solid #ccc;
+    padding: 10rpx 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+.nav-item {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22rpx;
+    color: #606060;
+}
+.bottom-nav-icon {
+    width: 50rpx;
+    height: 50rpx;
+}
+.status-icon {
+    height: 44rpx;
+    width: 44rpx;
+}
+.swiper-box {
+    display: flex;
+    flex: 1;
+}

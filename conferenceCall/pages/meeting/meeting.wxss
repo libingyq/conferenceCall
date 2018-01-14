@@ -1,0 +1,91 @@
+/* pages/meeting/meeting.wxss */
+.express-model {
+  background-color: white;
+  display: flex;
+  flex: 1;
+  height: 277rpx;
+  padding: 30rpx 0;
+}
+.express-model-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+.tab-group {
+    display: flex;
+    flex: 1;
+    background-color: white;
+    align-items: center;
+}
+.tab-title {
+    height: 100rpx;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    line-height: 100rpx;
+}
+.tab-title-active {
+    background-color: #e8f1f4;
+    color: black;
+}
+.scroll-item {
+    height: 96rpx;
+    background-color: white;
+    display: flex; 
+    padding: 0 28rpx;
+}
+    
+.scroll-item-inner {
+    border-bottom: 1rpx solid #f0f0f0;
+    width:  300rpx; 
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+/*解决未分组的列表下面flex布局不生效的办法*/
+.startMeeting{
+  margin-left: 58rpx;
+}
+.button-detail{
+  width: 50rpx;
+}
+/*结束*/
+.button-plain {
+    width: 108rpx;
+    height: 40rpx;
+    text-align: center;
+    line-height: 40rpx;
+    background-color: white;
+    color: #5997ae;
+    font-size: 24rpx;
+    border-radius: 40rpx;
+    border: 1rpx solid #5997ae;
+}
+.item-edit {
+    align-content: center;
+    justify-content: space-between;
+    display: flex;
+}
+.no-group-model {
+    background-color: white;
+    padding: 0 28rpx;
+}
+.horizontal-scroll-container {
+    height: 76rpx;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    width:100%;
+    white-space: nowrap;
+    line-height: 76rpx;
+}
+.horizontal-scroll-item {
+    display: inline-block;
+    padding: 0 10rpx;
+}

@@ -1,0 +1,33 @@
+<!--pages/join_meeting/join_meeting.wxml-->
+<view class='container flex colume'>
+    <view class='error-message'>
+        <text>会议号不能为空</text>
+    </view>
+    
+    <form class='form-container'>
+        <view class='form-group flex'>
+            <label class='form-label form-group-item'>
+                <view class='form-item-title'>请输入会议号：</view>
+                <view class='flex'>
+                    <input type='number' class='form-input' placeholder='请输入号码'></input>
+                </view>
+            </label>
+        </view>
+    </form>
+    <view class='model-title'>会议历史记录</view>
+    <scroll-view class='list-container flex' scroll-y='true'>
+        <view class='list-item border-line historyMeeting'>
+            <view>zhoyi</view>
+            <button class='button-primary button-mini'>加入</button>
+        </view>
+        <view class='list-item border-line historyMeeting'>
+            <view>zhoyi</view>
+            <button class='button-primary button-mini'>加入</button>
+        </view>
+    </scroll-view>
+    <view class='model-title' style='text-align:right;'>清空历史记录</view>
+    <view class='bottom-button-container'>
+        <button class='button-primary' bindtap='joinMeetingByNumber'>加入</button>
+        <button class='button-default mt-30' bindtap='navigateBack'>返回</button>
+    </view>
+</view>

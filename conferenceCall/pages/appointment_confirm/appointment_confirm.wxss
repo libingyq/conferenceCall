@@ -1,0 +1,39 @@
+/* pages/appointment_confirm/appointment_confirm.wxss */
+.users-list-container {
+    background-color: white;
+}
+.user-list-item {
+    height: 96rpx;
+    display: flex;
+}
+.user-content {
+    background-color: white;
+    padding: 0 28rpx;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 750rpx;
+}
+.user-menu {
+    width: 290rpx;
+    color: white;
+    display: flex;
+}
+.set-user {
+    background-color: #c2c2c2;
+    text-align: center;
+    line-height: 96rpx;
+    width: 180rpx;
+}
+.remove-user {
+    background-color: #d23318;
+    line-height: 96rpx;
+    text-align: center;
+    width: 110rpx;
+}
+.list-item-inner {
+    width: 1050rpx;
+    display: flex;
+    transition: margin-left 0.2s ease-in-out;
+}

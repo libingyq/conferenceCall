@@ -1,0 +1,67 @@
+/* pages/mail_list/mail_list.wxss */
+.navigate-search {
+    height: 66rpx;
+    width: 618rpx;
+    border-radius: 66rpx;
+    border: 1rpx solid #ccc;
+    background-color: #f6f6f6;
+}
+.search-container {
+    display: flex;
+    height: 100rpx;
+    background-color: white;
+    padding: 0 28rpx;
+    align-items: center;
+    justify-content: space-between;
+}
+.scroll-inner {
+    padding: 0 28rpx;
+    background-color: white;
+}
+.scroll-item-title {
+    height: 96rpx;
+    background-color: white;
+}
+.scroll-container {
+    display: flex;
+    flex: 1;
+    box-sizing: border-box;
+
+}
+.scroll-item-title {
+    display: flex;
+    align-items: center;
+}
+.icon-select {
+    display: inline-flex;
+    height: 40rpx;
+    width: 40rpx;
+    border: 1rpx solid #b8b8b8;
+    border-radius: 40rpx;
+}
+.group-item {
+    display: flex;
+    height: 96rpx;
+    align-items: center;
+}
+.scroll-item-group {
+    padding-left: 50rpx;
+}
+/*-----after*/
+.icon-mail{
+  color: black;
+  width:30rpx;
+  height: 40rpx;
+  transition: All 0.4s ease;   
+  -webkit-transition: All 0.4s ease; 
+}
+.rotateDown{
+  transform: rotate(90deg);
+}
+.usersLength{
+  width: 100rpx;
+  /* background-color: plum; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

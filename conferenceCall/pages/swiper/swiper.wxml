@@ -1,0 +1,18 @@
+<!--pages/home/home.wxml-->
+<view class="swiper-tab"> 
+  <view class="swiper-tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">热门</view> 
+  <view class="swiper-tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">关注</view> 
+  <view class="swiper-tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">好友</view> 
+</view> 
+ 
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 80}}px" bindchange="bindChange"> 
+  <swiper-item> 
+   <view>热门</view> 
+  </swiper-item> 
+  <swiper-item> 
+   <view>关注</view> 
+  </swiper-item> 
+  <swiper-item> 
+   <view>好友</view> 
+  </swiper-item> 
+</swiper> 

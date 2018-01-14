@@ -1,0 +1,80 @@
+<view class='container flex colume'>
+    <view class='tab-container'>
+    <view class='tab-item flex'>
+        <view class='tab-item-inner {{currentTab == "0" ? "tab-active" : ""}}' data-current="0" bindtap="swichNav">会中</view>
+    </view>
+    <view class='tab-item flex'>
+        <view class='tab-item-inner {{currentTab == "1" ? "tab-active" : ""}}' data-current="1" bindtap="swichNav">未入会</view>
+    </view>
+</view>
+<swiper current="{{currentTab}}" duration="300" bindchange="bindChange" class='swiper-box'>
+    <swiper-item>
+        <scroll-view class='list-container mt-20'>
+            <view class='list-item' style='background-color:white'>
+                <view class='list-item-inner border-line flex'>
+                    <view class='flex-1 item-center'>
+                        <text>涨钱</text>
+                        <text>(主持人)</text>
+                    </view>
+                    <view class='flex-2 space-between item-center'>
+                        <view>18611781283</view>
+                        <view class='inline-flex'>
+                            <image src='../../image/conference_-mute.png' mode='aspectFit' class='status-icon'></image>
+                        </view>
+                        <view>
+                            <image src='../../image/conference_arrow.png' mode='widthFix' class='icon-next'></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    <swiper-item>
+        <scroll-view class='list-container mt-20'>
+            <view class='list-item'  wx:for='{{selectedJoinUser}}' wx:key='index' style='background-color:white'>
+                <view class='list-item-inner border-line flex'>
+                    <view class='flex-1 item-center'>
+                        <text>{{item.username}}</text>
+                        <text>(参会人)</text>
+                    </view>
+                    <view class='flex-2 space-between item-center'>
+                        <view>{{item.telephone}}</view>
+                        <view class='inline-flex'>
+                            <image src='../../image/conference_-connect.png' mode='aspectFit' class='status-icon'></image>
+                        </view>
+                        <view class='inline-flex'>
+                            <image src='../../image/conference_access_failure.png' mode='aspectFit' class='status-icon'></image>
+                        </view>
+                        <view>
+                            <image src='../../image/conference_arrow.png' mode='widthFix' class='icon-next'></image>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </swiper-item>
+    
+</swiper>
+<view class='bottom-nav-container'>
+    <view class='nav-item'>
+        <image src='../../image/conference_mute_all_normal.png' mode='widthFix' class='bottom-nav-icon'></image>
+        <text>全体静音</text>
+    </view>
+    <view class='nav-item'>
+        <image src='../../image/conference_group_busy_normal.png' mode='widthFix' class='bottom-nav-icon'></image>
+        <text>群呼</text>
+    </view>
+    <view class='nav-item'>
+        <image src='../../image/conference_mute.png' mode='widthFix' class='bottom-nav-icon'></image>
+        <text>静音</text>
+    </view>
+    <view class='nav-item'>
+        <image src='../../image/conference_recording-.png' mode='widthFix' class='bottom-nav-icon'></image>
+        <text>录音</text>
+    </view>
+    <view class='nav-item' bindtap='showActionSheet'>
+        <image src='../../image/meeting_more_normal.png' mode='widthFix' class='bottom-nav-icon'></image>
+        <text>更多</text>
+    </view>
+</view>
+</view>

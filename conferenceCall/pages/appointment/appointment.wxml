@@ -1,0 +1,73 @@
+<scroll-view>
+    <view class="container">
+    <form class='form-container'>
+        <view class='form-group mt-20'>
+            <label class='form-label form-group-item'>
+                <view class='flex border-line'>
+                    <view class='form-item-title'>请输入会议主题：</view>
+                    <view class='flex'>
+                        <input type='text' class='form-input' placeholder='请输入会议主题' bindinput='bindconfNameInput'/>
+                    </view>
+                </view>
+            </label>
+            <label class='form-label form-group-item'>
+                <view class='flex border-line'>
+                    <view class='form-item-title'>开始时间：</view>
+                    <view class='flex picker-container'>
+                        <view>
+                            <picker mode="date" value="{{date}}"  bindchange="bindDateChange">
+                                <view class="date-picker">{{date}}</view>
+                            </picker>
+                        </view>
+                        <view>
+                            <picker mode="time" value="{{time}}" bindchange="bindTimeChange">
+                                <view class="time-picker">{{time}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                </view>   
+            </label>
+            <label class='form-label form-group-item'>
+                <view class='form-item-title'>估计时长：</view>
+                <view class='inline-flex picker-container'>
+                    <view>
+                        <input type='number' class='number-input' bindinput='bindDurationInput'></input>
+                    </view>
+                    <view>分钟</view>
+                </view>
+            </label>
+        </view>
+        <view class='form-group mt-20'>
+            <view class='form-group-item border-line flex space-between'>
+                <view class='inline-flex'>参会人</view>
+                <view class='join-user-type inline-flex'>
+                    <navigator url='../create_contacts/create_contacts' class='button-default button-mini mr-10'>手动添加</navigator>
+                    <navigator url='../mail_list/mail_list' class='button-default button-mini'>通讯录添加</navigator>
+                </view>
+            </view>
+        </view>
+        <view class='users-list-container'>
+            <!-- <view class='user-list-item' wx:for="{{list}}" wx:key="{{index}}"> -->
+            <view class='user-list-item'   wx:for='{{selectedUsers}}' wx:key='{{index}}' wx:for-item='iteminfo'> 
+                <!-- <view class='list-item-inner' style='{{item.left}}'> -->
+                <view class='list-item-inner' style='{{iteminfo.left}}'>
+                    <!-- <view class='user-content border-line' bindtouchstart='touchS' 
+                    bindtouchmove='touchM' bindtouchend='touchE' data-index="{{index}}"> -->
+                    <view class='user-content border-line' bindtouchstart='touchS' 
+                    bindtouchmove='touchM' bindtouchend='touchE' data-index='{{index}}'> 
+                       <view>{{iteminfo.username}}</view>
+                       <view>{{iteminfo.telephone}}</view>
+                    </view>
+                    <view class='user-menu flex'>
+                        <view class='set-user' data-index="{{index}}" catchtap='delItem'>设为参会人</view>
+                        <view class='remove-user' data-index="{{index}}" catchtap='delItem'>删除</view>
+                    </view>        
+                 </view>                     
+            </view>    
+        </view>
+    </form>
+</view>
+</scroll-view>
+<view class='bottom-button-container'>
+     <button class='button-primary' bindtap='navigateToPreview'>预约会议</button>    
+</view>

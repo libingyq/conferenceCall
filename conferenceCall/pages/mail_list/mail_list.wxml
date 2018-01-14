@@ -1,0 +1,64 @@
+<!--pages/mail_list/mail_list.wxml-->
+<view>
+  <view class='search-container'>
+    <view>
+      <navigator class='navigate-search'></navigator>
+    </view>
+    <view>
+      <navigator url='../create_contacts/create_contacts' style='font-size:60rpx;'>+</navigator>
+    </view>
+  </view>
+  <view class='mt-20'>
+    <view class='scroll-inner'>
+      <view class='scroll-list'>
+        <view class='scroll-item' wx:for="{{list}}" wx:key="{{index}}">
+          <view class='scroll-item-title border-line'>
+            <!-- 所有联系人大的分类前面的圈圈-->
+            <view class='icon-select' data-index="{{index}}" data-selected="{{item.selected}}" bindtap='toggleGroup'>
+              <block wx:if="{{item.selected}}">
+                <icon type="success" color='#5996ad' size="20" />
+              </block>
+            </view>
+            <view class='flex space-between ml-20'>
+              <view class='inline-flex'>{{item.groupname}}</view>
+              <view class='usersLength'>
+                <view class='inline-flex'>
+                  <text>{{item.users.length}}</text>
+                </view>
+                <view class='inline-flex' bindtap='clickIcon' data-index='{{index}}'>
+                  <image src='../../image/conference_arrow.png' class="icon-next icon-mail {{item.toggle?'rotateDown':''}}" mode='widthFix'>
+                  </image>
+                </view>
+              </view>
+
+            </view>
+          </view>
+          <view class='scroll-item-group border-line'>
+            <!-- <view class='group-item' wx:for="{{item.users}}" wx:key="{{index}}" data-index="{{index}}">   -->
+            <!-- <view class='icon-select'  data-index="{{index}}" data-selected='{{item.selected}}' bindtap='toggleItem'> -->
+            <view class='group-item' wx:for="{{item.users}}" wx:key="{{index}}" data-index="{{index}}" wx:for-item='sigitem' wx:for-index='sigindex' wx:if="{{item.toggle}}">
+              <view class='icon-select' data-listnumber='{{index}}' data-index="{{sigindex}}" data-checked='{{item.selected}}' bindtap='toggleItem'>
+                <block wx:if="{{item.selected}}">
+                  <icon type="success" color='#5996ad' size="20" />
+                </block>
+                <block wx:if="{{sigitem.checked}}">
+                    <icon type="success" color='#5996ad' size="20" />
+                </block>
+                
+
+              </view>
+              <view class='flex space-between ml-20'>
+                <view class='inline-flex'>{{sigitem.username}}</view>
+                <view class='inline-flex'>{{sigitem.telephone}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='bottom-button-container'>
+
+<button class='button-primary' bindtap='saveUser'>保存</button>
+</view>

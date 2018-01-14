@@ -1,0 +1,15 @@
+<!--pages/more/more.wxml-->
+<view class='list-container flex colume'>
+    <navigator url='../mail_list/mail_list' class='list-item border-line next item-center'>
+        <text class='flex'>通讯录</text>
+        <view>
+            <image class='icon-next' src='../../image/conference_arrow.png' mode='widthFix'></image>
+        </view>
+    </navigator>
+    <navigator url='../account/account' class='list-item border-line next item-center'>
+        <text class='flex'>账户信息</text>
+        <view>
+            <image class='icon-next' src='../../image/conference_arrow.png' mode='widthFix'></image>
+        </view>
+    </navigator>
+</view>

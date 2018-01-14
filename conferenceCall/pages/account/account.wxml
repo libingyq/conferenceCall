@@ -1,0 +1,34 @@
+<!--pages/more/more.wxml-->
+<view class='container flex colume'>
+    <view>
+        <view class='userinfo-container flex mt-20'>
+            <view class='userinfo-inner flex border-line'>
+                <view class='user-head-container inline-flex'>
+                    <image class='user-image'></image>
+                </view>
+                <view class='userinfo-content flex colume'>
+                    <view class='flex items-center'>移动通讯云-验证前</view>
+                    <view class='flex items-center'>邮箱： uamngdsfgdgdfgfd</view>
+                </view> 
+            </view>
+        </view>
+        <view class='model-group mt-10'>
+            <view class='group-inner'>
+                <view class='group-item border-line'>会议号：1542222</view>
+                <view class='group-item border-line'>主持人密码：4554545d</view>
+            </view>
+        </view>
+        <view class='model-group flex mt-20'>
+            <view class='group-inner flex space-between border-line'>
+                <view class='group-item inline-flex'>强制静音</view>
+                <view class='group-item inline-flex'>
+                    <switch color='#4a8ea4'></switch>
+                </view>
+            </view>
+        </view>
+        <text class='alert-message'>启用强制静音后：*4全体静音后，参会人*6不可自行解除</text>
+    </view>
+</view>
+<view class='bottom-button-container'>
+    <button type='warn'>注销</button>
+</view>

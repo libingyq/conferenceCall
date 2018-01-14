@@ -1,0 +1,63 @@
+ {
+    "pages": [
+        "pages/checkStatus/index",
+        "pages/meeting/meeting",
+        "pages/appointment/appointment",
+        "pages/list/list",
+        "pages/more/more",
+        "pages/meeting_detail/meeting_detail",
+        "pages/start_meeting/start_meeting",
+        "pages/join_meeting/join_meeting",
+        "pages/create_contacts/create_contacts",
+        "pages/mail_list/mail_list",
+        "pages/mail_search/mail_search",
+        "pages/account/account",
+        "pages/appointment_confirm/appointment_confirm",
+        "pages/meetingControl/meetingControl",
+        "pages/swiper/swiper",
+        "pages/bindUser/bindUser"
+    ],
+    "window": {
+        "backgroundTextStyle": "block",
+        "navigationBarBackgroundColor": "#e0e3e4",
+        "navigationBarTitleText": "瞩目电话会议",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#a0a0a0",
+        "selectedColor": "#5996ad",
+        "borderStyle": "black",
+        "backgroundColor": "#f6f6f6",
+        "list": [
+            {
+                "iconPath": "image/meeting_home_normal.png",
+                "selectedIconPath": "image/meeting_home_highlighted.png",
+                "pagePath": "pages/meeting/meeting",
+                "text": "开会"
+            },
+            {
+                "iconPath": "image/meeting_appointment_normal.png",
+                "selectedIconPath": "image/meeting_appointment_highlighted.png",
+                "pagePath": "pages/appointment/appointment",
+                "text": "预约"
+            },
+            {
+                "iconPath": "image/meeting_tabulation_normal.png",
+                "selectedIconPath": "image/meeting_tabulation_highlighted.png",
+                "pagePath": "pages/list/list",
+                "text": "列表"
+            },
+            {
+                "iconPath": "image/meeting_more_normal.png",
+                "selectedIconPath": "image/meeting_more_highlighted.png",
+                "pagePath": "pages/more/more",
+                "text": "更多"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 10000,
+        "downloadFile": 10000
+    },
+    "debug": true
+}

@@ -1,0 +1,69 @@
+<!--pages/meeting_detail/index.wxml-->
+<view class='container flex colume'>
+  <scroll-view class='list-container flex mt-20' scroll-y='true'>
+    <!--会议详情列表 -->
+    <!-- <block > -->
+      <view class='list-item border-line detail' wx:for="{{detailList}}" wx:key='unique'>
+        <view>{{item.username}}</view>
+        <view>{{item.telephone}}</view>
+      </view>
+    <!-- <block> -->
+
+        <!-- <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view>
+        <view class='list-item border-line'>
+            <view>zhoyi</view>
+            <view>23898290348920948</view>
+        </view> -->
+  </scroll-view>
+</view>
+<view class='bottom-button-container'>
+  <button class='button-primary'>开会</button>
+  <button class='button-default mt-30' bindtap='navigateBack'>返回</button>
+</view>

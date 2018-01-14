@@ -1,0 +1,79 @@
+/* pages/appointment/appointment.wxss */
+
+.date-picker {
+    width: 280rpx;
+    height: 50rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 5rpx;
+    line-height: 50rpx;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.time-picker {
+    width: 250rpx;
+    height: 50rpx;
+    border: 1rpx solid #ccc;
+    border-radius: 5rpx;
+    line-height: 50rpx;
+    padding: 0 10rpx;
+    box-sizing: border-box;
+}
+.picker-container {
+    align-items: center;
+    justify-content: space-between;
+}
+.button-plain {
+    text-align: center;
+    height: 48rpx;
+    width: 146rpx;
+    line-height: 48rpx;
+    border: 1rpx solid #5996ad;
+    border-radius: 48rpx;
+    color: #5996ad;
+    font-size: 24rpx;
+}
+.number-input {
+    height: 50rpx;
+    width: 100rpx;
+    padding: 0 10rpx;
+    border: 1rpx solid #ccc;
+
+}
+.users-list-container {
+    background-color: white;
+}
+.user-list-item {
+    height: 96rpx;
+    display: flex;
+}
+.user-content {
+    background-color: white;
+    padding: 0 28rpx;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 750rpx;
+}
+.user-menu {
+    width: 290rpx;
+    color: white;
+    display: flex;
+}
+.set-user {
+    background-color: #c2c2c2;
+    text-align: center;
+    line-height: 96rpx;
+    width: 180rpx;
+}
+.remove-user {
+    background-color: #d23318;
+    line-height: 96rpx;
+    text-align: center;
+    width: 110rpx;
+}
+.list-item-inner {
+    width: 1050rpx;
+    display: flex;
+    transition: margin-left 0.2s ease-in-out;
+}

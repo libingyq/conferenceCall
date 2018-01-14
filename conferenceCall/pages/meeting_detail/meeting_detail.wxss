@@ -1,0 +1,6 @@
+/* pages/meeting_detail/index.wxss */
+.detail{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
